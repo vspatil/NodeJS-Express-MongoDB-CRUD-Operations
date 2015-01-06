@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each user, i in userlist
+            li=user.name   
+                 a(href='/Delete/#{user.email}')  &nbsp;&nbsp;&nbsp; Delete      
+                            
+    p
+    a(href='/home') Back
